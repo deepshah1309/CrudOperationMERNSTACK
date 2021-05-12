@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from '@material-ui/core/Button';
-
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-
+import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
 
 import { MDBDataTableV5 } from 'mdbreact';
 import './Main.css';
 const Main = () => {
-    const backendUrl = "https://crudmernstackdeep.herokuapp.com/";
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const backendUrl="https://crudmernstackdeep.herokuapp.com/";
     const [newData, setnewData] = useState({
         Name: "",
         PhoneNumber: "",
@@ -215,19 +220,7 @@ const Main = () => {
 
                     </div>
                 </nav>
-                <div className="row">
-
-                    <div>
-                        <h2 className="bg-success text-white">{message}</h2>
-                        <br></br>
-                        <button onClick={handleClickOpen} className="btn border-primary rounded-pill">
-                            <b>Insert<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZmAJcqj4qSFhOT0HWtRRSZ68FyHrbm21vnQ&usqp=CAU" alt="add" height="60" width="60"></img></b>
-                        </button>
-                        <button className="btn text-dark btn-white border-primary rounded-pill" onClick={handleSend}>
-                            <b>Send<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jydI5gNNiEFPc1G7HHhUTudbRSAxzswrog&usqp=CAU" alt="send" height="60" width="60"></img></b>
-                        </button>
-                        
-                        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <Dialog open={open} fullScreen={fullScreen} onClose={handleClose} aria-labelledby="form-dialog-title">
                             <DialogTitle id="form-dialog-title">Insert Data</DialogTitle>
                             <DialogContent className="text-dark" style={{fontSize:"1rem"}}>
 
@@ -256,7 +249,7 @@ const Main = () => {
 
                             </DialogActions>
                         </Dialog>
-                        <Dialog open={openUpdateModal} onClose={handleCloseUpdate} aria-labelledby="form-dialog-title">
+                        <Dialog open={openUpdateModal} fullScreen={fullScreen} onClose={handleCloseUpdate} aria-labelledby="form-dialog-title">
                             <DialogTitle id="form-dialog-title">Update Data</DialogTitle>
                             <DialogContent>
 
@@ -284,6 +277,19 @@ const Main = () => {
 
                             </DialogActions>
                         </Dialog>
+                <div className="row">
+
+                    <div>
+                        <h2 className="bg-success text-white">{message}</h2>
+                        <br></br>
+                        <button onClick={handleClickOpen} className="btn border-primary rounded-pill">
+                            <b>Insert<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZmAJcqj4qSFhOT0HWtRRSZ68FyHrbm21vnQ&usqp=CAU" alt="add" height="60" width="60"></img></b>
+                        </button>
+                        <button className="btn text-dark btn-white border-primary rounded-pill" onClick={handleSend}>
+                            <b>Send<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jydI5gNNiEFPc1G7HHhUTudbRSAxzswrog&usqp=CAU" alt="send" height="60" width="60"></img></b>
+                        </button>
+                        
+   
                         
                         
                         <br></br>
