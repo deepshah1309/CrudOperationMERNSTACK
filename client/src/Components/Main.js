@@ -227,7 +227,7 @@ const Main = () => {
                             <b>Send<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jydI5gNNiEFPc1G7HHhUTudbRSAxzswrog&usqp=CAU" alt="send" height="60" width="60"></img></b>
                         </button>
                         
-                        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" className="bg-transparent text-white">
+                        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                             <DialogTitle id="form-dialog-title">Insert Data</DialogTitle>
                             <DialogContent className="text-dark" style={{fontSize:"1rem"}}>
 
