@@ -11,7 +11,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { MDBDataTableV5 } from 'mdbreact';
 import './Main.css';
 const Main = () => {
-    const backendUrl = "http://localhost:8000/";
+    const backendUrl = "https://crudmernstackdeep.herokuapp.com/";
     const [newData, setnewData] = useState({
         Name: "",
         PhoneNumber: "",
