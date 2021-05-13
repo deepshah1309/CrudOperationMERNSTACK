@@ -4,6 +4,8 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
+import '@fortawesome/fontawesome-free/css/all.css';
+import 'mdbreact/dist/css/mdb.css'
 
 import DialogTitle from '@material-ui/core/DialogTitle';
 // import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -290,6 +292,7 @@ const Main = () => {
                                 responsiveLg
                                 striped
                                 hover
+                                theadTextWhite
                                 theadColor="indigo"
                                 data={datatable}
                                 dark
