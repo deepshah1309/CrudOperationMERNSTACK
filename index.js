@@ -125,7 +125,7 @@ app.post("/sendMail",(req,res)=>{
         })+'</ul>';
          var mailOptions = {
              from: 'deepwebwork123@gmail.com',
-             to: 'deepshah1309@gmail.com',
+             to: 'info@redpositive.in',
              subject: 'Sending selected data',
              html:texts
            };

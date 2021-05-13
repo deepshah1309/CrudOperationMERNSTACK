@@ -218,17 +218,17 @@ const Main = () => {
 
                                 <form onSubmit={handleInsertSubmit} method="POST">
                                     <label htmlFor="Name"><h3>Name:</h3></label>
-                                    <input type="text" id="Name" name="Name" value={newData.Name} onChange={handleInsertChange}></input>
+                                    <input type="text" id="Name" name="Name" value={newData.Name} onChange={handleInsertChange} required></input>
 
                                     <br></br>
                                     <label htmlFor="phoneNumber"><h3>PhoneNumber:</h3></label>
-                                    <input type="tel" id="phoneNumber" value={newData.PhoneNumber} name="PhoneNumber" onChange={handleInsertChange}></input>
+                                    <input type="tel" id="phoneNumber" value={newData.PhoneNumber} name="PhoneNumber" onChange={handleInsertChange} required></input>
                                     <br></br>
                                     <label htmlFor="email"><h3>Email:</h3></label>
-                                    <input type="email" id="email" name="Email" value={newData.Email} onChange={handleInsertChange}></input>
+                                    <input type="email" id="email" name="Email" value={newData.Email} onChange={handleInsertChange} required></input>
                                     <br></br>
                                     <label htmlFor="hobbies"><h3>Hobbies:</h3></label>
-                                    <input type="text" id="hobbies" name="Hobbies" value={newData.Hobbies} onChange={handleInsertChange}></input>
+                                    <input type="text" id="hobbies" name="Hobbies" value={newData.Hobbies} onChange={handleInsertChange} required></input>
                                     <br></br>
                                     <br></br>
                                     <button type="submit" className="btn btn-success text-white">Insert</button>
@@ -247,16 +247,16 @@ const Main = () => {
 
                                 <form onSubmit={handleUpdateSubmit} method="POST">
                                     <label htmlFor="Name"><h3>Enter Name{updateData.Name}</h3></label>
-                                    <input type="text" id="Name" name="Name" value={updateData.Name} onChange={handleUpdateChange}></input>
+                                    <input type="text" id="Name" name="Name" value={updateData.Name} onChange={handleUpdateChange} required></input>
 
                                     <br></br>
                                     <label htmlFor="phoneNumber"><h3>Enter PhoneNumber:</h3></label>
-                                    <input type="tel" id="phoneNumber" value={updateData.PhoneNumber} name="PhoneNumber" onChange={handleUpdateChange}></input>
+                                    <input type="tel" id="phoneNumber" value={updateData.PhoneNumber} name="PhoneNumber" onChange={handleUpdateChange} required></input>
                                     <br></br>
                                     
                                     <br></br>
                                     <label htmlFor="hobbies"><h3>Enter your Hobbies:</h3></label>
-                                    <input type="text" id="hobbies" name="Hobbies" value={updateData.Hobbies} onChange={handleUpdateChange}></input>
+                                    <input type="text" id="hobbies" name="Hobbies" value={updateData.Hobbies} onChange={handleUpdateChange} required></input>
                                     <br></br>
                                     <br></br>
                                     <button type="submit" className="btn btn-success text-white">Update</button>
