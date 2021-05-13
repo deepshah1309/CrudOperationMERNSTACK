@@ -6,16 +6,16 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 
 import DialogTitle from '@material-ui/core/DialogTitle';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
+// import { useTheme } from '@material-ui/core/styles';
 
 
 
 import { MDBDataTableV5 } from 'mdbreact';
 import './Main.css';
 const Main = () => {
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    // const theme = useTheme();
+    // const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const backendUrl="https://crudmernstackdeep.herokuapp.com/";
     const [newData, setnewData] = useState({
         Name: "",
@@ -204,23 +204,13 @@ const Main = () => {
     return (
         <>
             <div className="container-fluid">
-                <nav className="navbar navbar-expand-lg  bg-primary text-white">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a className="navbar-brand text-white" href="/">MernStackTask</a>
-                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li className="nav-item active">
-                                <a className="nav-link text-white" href="/">Home</a>
-                            </li>
-
-
-                        </ul>
-
-                    </div>
-                </nav>
-                <Dialog open={open} fullScreen={fullScreen} onClose={handleClose} aria-labelledby="form-dialog-title">
+            <nav class="navbar-expand-lg  navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">MernStackTask</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+                <Dialog open={open}  onClose={handleClose} aria-labelledby="form-dialog-title">
                             <DialogTitle id="form-dialog-title">Insert Data</DialogTitle>
                             <DialogContent className="text-dark" style={{fontSize:"1rem"}}>
 
@@ -249,7 +239,7 @@ const Main = () => {
 
                             </DialogActions>
                         </Dialog>
-                        <Dialog open={openUpdateModal} fullScreen={fullScreen} onClose={handleCloseUpdate} aria-labelledby="form-dialog-title">
+                        <Dialog open={openUpdateModal}  onClose={handleCloseUpdate} aria-labelledby="form-dialog-title">
                             <DialogTitle id="form-dialog-title">Update Data</DialogTitle>
                             <DialogContent>
 
@@ -293,8 +283,11 @@ const Main = () => {
                         
                         
                         <br></br>
-                        <div className="setinside">
+                        <div className="setinside w-100">
                             <MDBDataTableV5
+                                responsiveSm
+                                responsiveMd
+                                responsiveLg
                                 striped
                                 hover
                                 theadColor="indigo"

@@ -4,13 +4,17 @@ td{
 }
 
 .setinside{
-    background-color:cornsilk;
+
     color:black;
     font-size: larger;
     font-weight: bolder;
     box-sizing: border-box;
     border:3px solid white;
     border-radius:9px;
+}
+.mdb-dataTable{
+    overflow-x:auto;
+
 }
 [data-test="table-foot"]{
     display:none;
