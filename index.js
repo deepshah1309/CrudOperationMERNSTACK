@@ -11,8 +11,7 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'deepwebwork123@gmail.com',
-    pass: 'nnonneujanuanqsx'
+//I have removed it for safety
   }
 });
 

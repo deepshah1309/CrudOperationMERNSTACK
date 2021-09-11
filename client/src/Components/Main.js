@@ -18,6 +18,8 @@ import './Main.css';
 const Main = () => {
     // const theme = useTheme();
     // const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const getToken=localStorage.getItem("token");
+    console.log(getToken,"got token");
     const backendUrl="https://crudmernstackdeep.herokuapp.com/";
     const [newData, setnewData] = useState({
         Name: "",
@@ -204,6 +206,7 @@ const Main = () => {
 
 
     return (
+        getToken!==null?(
         <>
             <div className="container-fluid">
             <nav class="navbar-expand-lg  navbar navbar-dark bg-primary">
@@ -301,7 +304,11 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </>):(<div><h1 className="bg-danger text-white">sorry you are not authorized!!</h1><br/>
+              <div className="v text-center bg-dark text-white h-100">
+                  <a href="/loginpart" className="text-decoration-none bg-success border-rounded-pill text-white loginBtn">Login</a>
+                </div>
+        </div>)
     )
 }
 export default Main;

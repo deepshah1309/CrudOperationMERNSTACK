@@ -1,5 +1,6 @@
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import Login from './Components/Login/Login';
 import Main from './Components/Main';
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main/>
+          </Route>
+          <Route exact path="/loginpart">
+            <Login/>
           </Route>
         </Switch>
       </Router>

@@ -2,7 +2,13 @@
 td{
     color:black;
 }
-
+.v{
+    min-height:100vh;
+}
+.loginBtn{
+    padding:10px;
+    margin-top:500px;
+}
 .setinside{
 
     color:black;
